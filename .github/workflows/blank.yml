@@ -43,10 +43,9 @@ jobs:
             node-version: "12.x"
         # Install the CLI from NPM
         - name: Install the TestEngine-CLI
-          run: npm install testengine-cli 
-        # Run tests with tag 'v2'
-        - name: Run new feature tests
-          run: testengine -V
+          run: | 
+            npm install testengine-cli
+            testengine --version
           
   publish:
     runs-on: ubuntu-latest
