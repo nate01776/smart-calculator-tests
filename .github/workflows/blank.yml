@@ -47,7 +47,7 @@ jobs:
             npm install testengine-cli -g
         - name: Run TestEngine new feature tests
           run: |
-            testengine -u github-agent -p testengine -H http://54.202.9.115:8080/ run project ./
+            testengine -u github_agent -p testengine -H http://54.202.9.115:8080/ run project ./
           
   publish:
     runs-on: ubuntu-latest
