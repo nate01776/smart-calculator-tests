@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="ad42f66e-0127-4034-a5a1-aedf945b05a3" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="/add Test Case" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>The test case generated for the REST resource [/add] located at [/add]</con:description>
+  <con:settings>
+    <con:setting id="ad42f66e-0127-4034-a5a1-aedf945b05a3fileName">%2Fadd-Test-Case</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Request 1" id="36d7eb8a-738f-454e-bc9b-7e54e73941c5">
+    <con:settings/>
+    <con:config service="Smartbear Calculator" resourcePath="/add" methodName="addInput" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest id="5fcda166-caf8-4766-93a7-08ff097bb167" mediaType="application/json" name="Request 1">
+        <con:settings/>
+        <con:request/>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:tagId>2b3604ca-db47-4771-9735-1d13250150b2</con:tagId>
+</con:testCase>

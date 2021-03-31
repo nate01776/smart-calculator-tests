@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="4248fd51-edc7-4d49-a452-9342987f4c8e" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="/subtract Test Case" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>The test case generated for the REST resource [/subtract] located at [/subtract]</con:description>
+  <con:settings>
+    <con:setting id="4248fd51-edc7-4d49-a452-9342987f4c8efileName">%2Fsubtract-Test-Case</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Request 1" id="5852c7bf-358e-435d-bc93-709e303f25d2">
+    <con:settings/>
+    <con:config service="Smartbear Calculator" resourcePath="/subtract" methodName="subtractInput" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest id="2830eb3d-fb16-46d5-ae00-29aba802035a" mediaType="application/json" name="Request 1">
+        <con:settings/>
+        <con:request/>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:tagId>2b3604ca-db47-4771-9735-1d13250150b2</con:tagId>
+</con:testCase>

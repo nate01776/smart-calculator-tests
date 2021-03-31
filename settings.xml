@@ -39,5 +39,10 @@
 // fos.close()</con:script>
   </con:eventHandlers>
   <con:authRepository/>
-  <con:tags/>
+  <con:tags>
+    <con:tag>
+      <con:id>2b3604ca-db47-4771-9735-1d13250150b2</con:id>
+      <con:name>v1</con:name>
+    </con:tag>
+  </con:tags>
 </con:soapui-project>

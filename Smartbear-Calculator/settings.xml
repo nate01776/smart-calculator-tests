@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:interface xsi:type="con:RestService" definitionUrl="C:\Users\nathan.wright\Downloads\Nathan-Demo-smartbear-calculator-1.0.0-resolved(1).json" id="40b3a380-be5f-4d85-a74c-25a98081a35f" name="Smartbear Calculator" type="rest_ex" wadlVersion="https://swagger.io/swagger2/specification" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<con:interface xsi:type="con:RestService" definitionUrl="C:\Users\nathan.wright\Downloads\Nathan-Demo-smartbear-calculator-1.0.0-resolved(1).json" id="40b3a380-be5f-4d85-a74c-25a98081a35f" name="Smartbear Calculator" type="rest_ex" wadlVersion="https://swagger.io/swagger2/specification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:description>A simple calculator for internal consumption Backend Repository - Front End Repository -</con:description>
   <con:settings>
     <con:setting id="40b3a380-be5f-4d85-a74c-25a98081a35ffileName">Smartbear-Calculator</con:setting>
