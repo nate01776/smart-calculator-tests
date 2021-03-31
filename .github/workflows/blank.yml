@@ -46,7 +46,7 @@ jobs:
           run: npm install testengine-cli 
         # Run tests with tag 'v2'
         - name: Run new feature tests
-          run: testengine -v
+          run: testengine -V
           
   publish:
     runs-on: ubuntu-latest
