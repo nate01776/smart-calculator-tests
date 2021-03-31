@@ -48,8 +48,10 @@ jobs:
         - name: Run TestEngine new feature tests
           env:
             TE_USER: ${{secrets.TESTENGINE_USER}}
+            TE_PASS: ${{secrets.TESTENGINE_PASS}}
+            TE_ADDR: ${{secrets.TESTENGINE_LOCATION}}
           run: |
-            testengine -u $TE_USER -p testengine -H http://54.202.9.115:8080/ run project ./
+            testengine -u $TE_USER -p $TE_PASS -H $TE_ADDR run project ./
           
   publish:
     runs-on: ubuntu-latest
