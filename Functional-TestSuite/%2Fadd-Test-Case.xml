@@ -5,6 +5,40 @@
     <con:setting id="ad42f66e-0127-4034-a5a1-aedf945b05a3fileName">%2Fadd-Test-Case</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="datasource" name="Data Source" id="c403207e-471b-4a4d-8a3f-492f4fee16ac">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="Data Generator">
+        <con:configuration>
+          <generatedDataCount>10</generatedDataCount>
+          <generatorsTotalNumber>2</generatorsTotalNumber>
+          <lastSelectedProperty>1</lastSelectedProperty>
+          <GeneratorType0>INT</GeneratorType0>
+          <PropertyName0>inputOne</PropertyName0>
+          <repetitionCountinputOne>0</repetitionCountinputOne>
+          <repeatValuesinputOne>false</repeatValuesinputOne>
+          <IntegerDataGeneratorMinValueinputOne>1</IntegerDataGeneratorMinValueinputOne>
+          <IntegerDataGeneratorMaxValueinputOne>100</IntegerDataGeneratorMaxValueinputOne>
+          <IntegerDataGeneratorStepValueinputOne>1</IntegerDataGeneratorStepValueinputOne>
+          <IntegerDataGeneratorConsequentValuesinputOne>false</IntegerDataGeneratorConsequentValuesinputOne>
+          <GeneratorType1>INT</GeneratorType1>
+          <PropertyName1>inputTwo</PropertyName1>
+          <repetitionCountinputTwo>0</repetitionCountinputTwo>
+          <repeatValuesinputTwo>false</repeatValuesinputTwo>
+          <IntegerDataGeneratorMinValueinputTwo>1</IntegerDataGeneratorMinValueinputTwo>
+          <IntegerDataGeneratorMaxValueinputTwo>100</IntegerDataGeneratorMaxValueinputTwo>
+          <IntegerDataGeneratorStepValueinputTwo>1</IntegerDataGeneratorStepValueinputTwo>
+          <IntegerDataGeneratorConsequentValuesinputTwo>false</IntegerDataGeneratorConsequentValuesinputTwo>
+          <escapeSpaceSequence/>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>inputOne</con:property>
+      <con:property>inputTwo</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+    </con:config>
+  </con:testStep>
   <con:testStep id="36d7eb8a-738f-454e-bc9b-7e54e73941c5" name="Request 1" type="restrequest">
     <con:settings/>
     <con:config xsi:type="con:RestRequestStep" methodName="addInput" resourcePath="/add" service="Smartbear Calculator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -36,8 +70,8 @@
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <con:entry key="inputOne" value="12"/>
-          <con:entry key="inputTwo" value="12"/>
+          <con:entry key="inputOne" value="${Data Source#inputOne}"/>
+          <con:entry key="inputTwo" value="${Data Source#inputTwo}"/>
         </con:parameters>
         <con:environmentSpec>
           <con:entry environmentId="72e8ddf9-866d-40ee-ad85-d93604437d7c">
@@ -47,8 +81,32 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
+  <con:testStep type="delay" name="Delay" id="6ac0d104-3adc-4000-a958-2d46229b524f">
+    <con:settings/>
+    <con:config>
+      <delay>1000</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="Data Source Loop" id="fd777eee-34f9-424c-ad8f-4e2b8fa459b6">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>Data Source</dataSourceStep>
+      <targetStep>Request 1</targetStep>
+      <discardResults>true</discardResults>
+    </con:config>
+  </con:testStep>
   <con:properties/>
   <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>c403207e-471b-4a4d-8a3f-492f4fee16ac</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>6ac0d104-3adc-4000-a958-2d46229b524f</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
   <con:environmentSpec>
     <con:entry environmentId="72e8ddf9-866d-40ee-ad85-d93604437d7c">
       <con:authProfile>Inherit From Parent</con:authProfile>

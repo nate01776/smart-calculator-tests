@@ -4,6 +4,41 @@
   <con:settings>
     <con:setting id="4248fd51-edc7-4d49-a452-9342987f4c8efileName">%2Fsubtract-Test-Case</con:setting>
   </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="datasource" name="Data Source" id="8b111631-eeb2-4886-8dcf-522b41ef5cc0">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="Data Generator">
+        <con:configuration>
+          <generatedDataCount>10</generatedDataCount>
+          <generatorsTotalNumber>2</generatorsTotalNumber>
+          <lastSelectedProperty>1</lastSelectedProperty>
+          <GeneratorType0>INT</GeneratorType0>
+          <PropertyName0>inputOne</PropertyName0>
+          <repetitionCountinputOne>0</repetitionCountinputOne>
+          <repeatValuesinputOne>false</repeatValuesinputOne>
+          <IntegerDataGeneratorMinValueinputOne>1</IntegerDataGeneratorMinValueinputOne>
+          <IntegerDataGeneratorMaxValueinputOne>100</IntegerDataGeneratorMaxValueinputOne>
+          <IntegerDataGeneratorStepValueinputOne>1</IntegerDataGeneratorStepValueinputOne>
+          <IntegerDataGeneratorConsequentValuesinputOne>false</IntegerDataGeneratorConsequentValuesinputOne>
+          <GeneratorType1>INT</GeneratorType1>
+          <PropertyName1>inputTwo</PropertyName1>
+          <repetitionCountinputTwo>0</repetitionCountinputTwo>
+          <repeatValuesinputTwo>false</repeatValuesinputTwo>
+          <IntegerDataGeneratorMinValueinputTwo>1</IntegerDataGeneratorMinValueinputTwo>
+          <IntegerDataGeneratorMaxValueinputTwo>100</IntegerDataGeneratorMaxValueinputTwo>
+          <IntegerDataGeneratorStepValueinputTwo>1</IntegerDataGeneratorStepValueinputTwo>
+          <IntegerDataGeneratorConsequentValuesinputTwo>false</IntegerDataGeneratorConsequentValuesinputTwo>
+          <escapeSpaceSequence/>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>inputOne</con:property>
+      <con:property>inputTwo</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+    </con:config>
+  </con:testStep>
   <con:testStep id="5852c7bf-358e-435d-bc93-709e303f25d2" name="Request 1" type="restrequest">
     <con:settings/>
     <con:config xsi:type="con:RestRequestStep" methodName="subtractInput" resourcePath="/subtract" service="Smartbear Calculator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -35,8 +70,8 @@
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <con:entry key="inputOne" value="10"/>
-          <con:entry key="inputTwo" value="5"/>
+          <con:entry key="inputOne" value="${Data Source#inputOne}"/>
+          <con:entry key="inputTwo" value="${Data Source#inputTwo}"/>
         </con:parameters>
         <con:environmentSpec>
           <con:entry environmentId="72e8ddf9-866d-40ee-ad85-d93604437d7c">
@@ -46,8 +81,32 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
+  <con:testStep type="delay" name="Delay" id="4ae4cf47-a3ec-46e7-8434-da519bcda747">
+    <con:settings/>
+    <con:config>
+      <delay>1000</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="Data Source Loop" id="4f2b3318-e4a5-4134-abc0-3a583ea1d2b7">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>Data Source</dataSourceStep>
+      <targetStep>Request 1</targetStep>
+      <discardResults>true</discardResults>
+    </con:config>
+  </con:testStep>
   <con:properties/>
   <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>8b111631-eeb2-4886-8dcf-522b41ef5cc0</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>4ae4cf47-a3ec-46e7-8434-da519bcda747</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
   <con:environmentSpec>
     <con:entry environmentId="72e8ddf9-866d-40ee-ad85-d93604437d7c">
       <con:authProfile>Inherit From Parent</con:authProfile>

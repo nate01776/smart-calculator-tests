@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource id="6d4113e6-09ba-4bde-85eb-de31c6f9b4a8" name="/subtract" path="/subtract" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="6d4113e6-09ba-4bde-85eb-de31c6f9b4a8" name="/subtract" path="/subtract" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="6d4113e6-09ba-4bde-85eb-de31c6f9b4a8fileName">%2Fsubtract</con:setting>
   </con:settings>

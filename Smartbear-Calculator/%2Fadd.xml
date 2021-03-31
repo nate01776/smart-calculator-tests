@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource id="cb6cec63-6048-4689-8619-a000f0228534" name="/add" path="/add" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="cb6cec63-6048-4689-8619-a000f0228534" name="/add" path="/add" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="cb6cec63-6048-4689-8619-a000f0228534fileName">%2Fadd</con:setting>
   </con:settings>
