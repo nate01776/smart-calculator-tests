@@ -29,12 +29,12 @@ jobs:
         env:
           SWAGGERHUB_API_KEY: ${{secrets.SWAGGERHUB_API_KEY}}
         run: |
-          swaggerhub api:get nate01776/smartbear-calculator/2.0.0
+          swaggerhub api:get Nathan-Demo/smartbear-calculator/2.0.0
       - name: Validate definition
         env:
           SWAGGERHUB_API_KEY: ${{secrets.SWAGGERHUB_API_KEY}}
         run: |
-          swaggerhub api:validate nate01776/smartbear-calculator/2.0.0
+          swaggerhub api:validate Nathan-Demo/smartbear-calculator/2.0.0
   Run-Regression-Tests:
     # The type of runner that the job will run on
     needs: [Validate-Design-on-Swaggerhub]
