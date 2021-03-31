@@ -84,8 +84,16 @@ jobs:
     runs-on: ubuntu-latest
     needs: [Run-Regression-Tests, Run-New-Feature-Tests]
     steps:
-      - name: Let them know your working
-        run: echo Hi from publish!
+      - name: Publish the API definition
+        env:
+          SWAGGERHUB_API_KEY: ${{secrets.SWAGGERHUB_API_KEY}}
+        run: |
+          swaggerhub api:publish Design-Swagger/smartbear-calculator/2.0.0
+      - name: Make new version the default
+        env:
+          SWAGGERHUB_API_KEY: ${{secrets.SWAGGERHUB_API_KEY}}
+        run: |
+          swaggerhub api:setdefault Design-Swagger/smartbear-calculator/2.0.0
           
           # FILLER ROOM
           # FILLER ROOM
