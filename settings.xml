@@ -38,7 +38,19 @@
 // pw.close()
 // fos.close()</con:script>
   </con:eventHandlers>
+  <con:environment id="72e8ddf9-866d-40ee-ad85-d93604437d7c" name="staging" index="0">
+    <con:service type="REST" name="Smartbear Calculator">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://staging-calculator.herokuapp.com</con:endpoint>
+    </con:service>
+    <con:databaseConnectionContainer/>
+    <con:jmsConnectionContainer/>
+  </con:environment>
   <con:authRepository/>
+  <con:environmentSpec>
+    <con:entry environmentId="72e8ddf9-866d-40ee-ad85-d93604437d7c">
+      <con:authProfile>No Authorization</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
   <con:tags>
     <con:tag>
       <con:id>2b3604ca-db47-4771-9735-1d13250150b2</con:id>

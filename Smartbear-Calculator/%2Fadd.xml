@@ -35,13 +35,37 @@
   "message" : "Error in request"
 }</con:sampleContent>
     </con:representation>
-    <con:request id="5fcda166-caf8-4766-93a7-08ff097bb167" mediaType="application/json" name="Request 1">
-      <con:settings/>
+    <con:request id="5fcda166-caf8-4766-93a7-08ff097bb167" mediaType="application/json" name="Request 1" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://smartbear-calculator.herokuapp.com</con:endpoint>
+      <con:request/>
+      <con:originalUri>https://smartbear-calculator.herokuapp.com/add</con:originalUri>
       <con:credentials>
         <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
         <con:authType>No Authorization</con:authType>
       </con:credentials>
-      <con:parameters/>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="inputOne" value="11"/>
+        <con:entry key="inputTwo" value="2"/>
+      </con:parameters>
+      <con:environmentSpec>
+        <con:entry environmentId="72e8ddf9-866d-40ee-ad85-d93604437d7c">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
     </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="72e8ddf9-866d-40ee-ad85-d93604437d7c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
   </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="72e8ddf9-866d-40ee-ad85-d93604437d7c">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:resource>

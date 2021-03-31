@@ -7,18 +7,51 @@
   <con:testStep type="restrequest" name="Request 1" id="36d7eb8a-738f-454e-bc9b-7e54e73941c5">
     <con:settings/>
     <con:config service="Smartbear Calculator" resourcePath="/add" methodName="addInput" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest id="5fcda166-caf8-4766-93a7-08ff097bb167" mediaType="application/json" name="Request 1">
-        <con:settings/>
+      <con:restRequest id="5fcda166-caf8-4766-93a7-08ff097bb167" mediaType="application/json" name="Request 1" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://smartbear-calculator.herokuapp.com</con:endpoint>
         <con:request/>
+        <con:originalUri>https://smartbear-calculator.herokuapp.com/add</con:originalUri>
+        <con:assertion type="JsonPath Existence Match" id="ddf2bbb6-7777-424f-b22b-1a847591e35c" name="Check for existence of [result]">
+          <con:configuration>
+            <path>$['result']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Valid HTTP Status Codes" id="ad8658c5-3513-4367-a7b7-fe99f42ba341" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
-        <con:parameters/>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="inputOne" value="12"/>
+          <con:entry key="inputTwo" value="12"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="72e8ddf9-866d-40ee-ad85-d93604437d7c">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
   <con:properties/>
   <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="72e8ddf9-866d-40ee-ad85-d93604437d7c">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
   <con:tagId>2b3604ca-db47-4771-9735-1d13250150b2</con:tagId>
 </con:testCase>
