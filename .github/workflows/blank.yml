@@ -44,7 +44,7 @@ jobs:
         # Install the CLI from NPM
         - name: Install the TestEngine-CLI
           run: | 
-            npm install testengine-cli
+            npm install testengine-cli &&
             testengine --version
           
   publish:
