@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testSuite id="e74e65a0-5a40-4e14-ab52-af464c9a2dbf" name="v1 Test Suite" xmlns:con="http://eviware.com/soapui/config">
+<con:testSuite id="e74e65a0-5a40-4e14-ab52-af464c9a2dbf" name="Functional TestSuite" xmlns:con="http://eviware.com/soapui/config">
   <con:description>The test suite generated for the REST service [Smartbear Calculator]</con:description>
   <con:settings>
-    <con:setting id="e74e65a0-5a40-4e14-ab52-af464c9a2dbffileName">v1-Test-Suite</con:setting>
+    <con:setting id="e74e65a0-5a40-4e14-ab52-af464c9a2dbffileName">Functional-TestSuite</con:setting>
   </con:settings>
   <con:runType>SEQUENTIAL</con:runType>
   <con:properties/>

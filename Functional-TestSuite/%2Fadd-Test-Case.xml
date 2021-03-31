@@ -4,6 +4,7 @@
   <con:settings>
     <con:setting id="ad42f66e-0127-4034-a5a1-aedf945b05a3fileName">%2Fadd-Test-Case</con:setting>
   </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="restrequest" name="Request 1" id="36d7eb8a-738f-454e-bc9b-7e54e73941c5">
     <con:settings/>
     <con:config service="Smartbear Calculator" resourcePath="/add" methodName="addInput" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -53,5 +54,5 @@
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
   </con:environmentSpec>
-  <con:tagId>2b3604ca-db47-4771-9735-1d13250150b2</con:tagId>
+  <con:tagId>48970670-3269-4f03-b138-068b25b4175d</con:tagId>
 </con:testCase>
