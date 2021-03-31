@@ -61,5 +61,9 @@
       <con:id>48970670-3269-4f03-b138-068b25b4175d</con:id>
       <con:name>regression</con:name>
     </con:tag>
+    <con:tag>
+      <con:id>ef5454c1-1681-4f02-99b0-d61ca1985a13</con:id>
+      <con:name>newFeature</con:name>
+    </con:tag>
   </con:tags>
 </con:soapui-project>
