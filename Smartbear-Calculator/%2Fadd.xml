@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/add" path="/add" id="cb6cec63-6048-4689-8619-a000f0228534" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="cb6cec63-6048-4689-8619-a000f0228534fileName">%2Fadd</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="addInput" id="fed5d57f-1d70-46b8-9701-7f9df8f68d1f" method="POST">
+    <con:description>add two numbers together</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>inputOne</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>First input to resolve</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>inputTwo</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>First input to resolve</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "result" : "1234567890"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "message" : "Error in request"
+}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request 1" id="5fcda166-caf8-4766-93a7-08ff097bb167" mediaType="application/json">
+      <con:settings/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>
