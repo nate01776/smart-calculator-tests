@@ -46,8 +46,10 @@ jobs:
           run: | 
             npm install testengine-cli -g
         - name: Run TestEngine new feature tests
+          env:
+            TE_USER: ${{secrets.TESTENGINE_USER}}
           run: |
-            testengine -u $TESTENGINE_USER -p testengine -H http://54.202.9.115:8080/ run project ./
+            testengine -u $TE_USER -p testengine -H http://54.202.9.115:8080/ run project ./
           
   publish:
     runs-on: ubuntu-latest
