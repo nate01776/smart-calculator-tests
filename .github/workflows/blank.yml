@@ -25,15 +25,14 @@ jobs:
       - name: Install SwaggerHub CLI
         run: |
           npm install swaggerhub-cli -g
-      - name: Configure CLI
-        env:
-          SH_KEY: ${{secrets.SWAGGERHUB_API_KEY}}
-        run: |
-          swaggerhub configure $SH_KEY
       - name: Check the API definition exists
+        env:
+          SWAGGERHUB_API_KEY: ${{secrets.SWAGGERHUB_API_KEY}}
         run: |
           swaggerhub api:get nate01776/smartbear-calculator/2.0.0
       - name: Validate definition
+        env:
+          SWAGGERHUB_API_KEY: ${{secrets.SWAGGERHUB_API_KEY}}
         run: |
           swaggerhub api:validate nate01776/smartbear-calculator/2.0.0
   Run-Regression-Tests:
