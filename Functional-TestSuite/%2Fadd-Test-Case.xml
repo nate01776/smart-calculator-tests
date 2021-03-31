@@ -5,7 +5,7 @@
     <con:setting id="ad42f66e-0127-4034-a5a1-aedf945b05a3fileName">%2Fadd-Test-Case</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="datasource" name="Data Source" id="c403207e-471b-4a4d-8a3f-492f4fee16ac">
+  <con:testStep id="c403207e-471b-4a4d-8a3f-492f4fee16ac" name="Data Source" type="datasource">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Data Generator">
@@ -81,13 +81,13 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="Delay" id="6ac0d104-3adc-4000-a958-2d46229b524f">
+  <con:testStep id="6ac0d104-3adc-4000-a958-2d46229b524f" name="Delay" type="delay">
     <con:settings/>
     <con:config>
       <delay>1000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="Data Source Loop" id="fd777eee-34f9-424c-ad8f-4e2b8fa459b6">
+  <con:testStep id="fd777eee-34f9-424c-ad8f-4e2b8fa459b6" name="Data Source Loop" type="datasourceloop">
     <con:settings/>
     <con:config>
       <dataSourceStep>Data Source</dataSourceStep>

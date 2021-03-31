@@ -5,7 +5,7 @@
     <con:setting id="4248fd51-edc7-4d49-a452-9342987f4c8efileName">%2Fsubtract-Test-Case</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="datasource" name="Data Source" id="8b111631-eeb2-4886-8dcf-522b41ef5cc0">
+  <con:testStep id="8b111631-eeb2-4886-8dcf-522b41ef5cc0" name="Data Source" type="datasource">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Data Generator">
@@ -81,13 +81,13 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="Delay" id="4ae4cf47-a3ec-46e7-8434-da519bcda747">
+  <con:testStep id="4ae4cf47-a3ec-46e7-8434-da519bcda747" name="Delay" type="delay">
     <con:settings/>
     <con:config>
       <delay>1000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="Data Source Loop" id="4f2b3318-e4a5-4134-abc0-3a583ea1d2b7">
+  <con:testStep id="4f2b3318-e4a5-4134-abc0-3a583ea1d2b7" name="Data Source Loop" type="datasourceloop">
     <con:settings/>
     <con:config>
       <dataSourceStep>Data Source</dataSourceStep>
