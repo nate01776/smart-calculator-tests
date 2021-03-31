@@ -17,20 +17,24 @@ jobs:
   regression:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build
+        # Checks-out your repository under $GITHUB_WORKSPACE, so job can access it and uses the Node setup
+        - uses: actions/checkout@v2
+        - name: Use Nodejs 12.x
+          uses: actions/setup-node@v1
+          with:
+            node-version: "12.x"
+        # Install the CLI from NPM
+        - name: Install the TestEngine-CLI
+          run: | 
+            npm install testengine-cli -g
+        - name: Run TestEngine regression tagged tests
+          env:
+            TE_USER: ${{secrets.TESTENGINE_USER}}
+            TE_PASS: ${{secrets.TESTENGINE_PASS}}
+            TE_ADDR: ${{secrets.TESTENGINE_LOCATION}}
+          run: |
+            testengine -u $TE_USER -p $TE_PASS -H $TE_ADDR run project tags=regression ./
           
   new-features:
     runs-on: ubuntu-latest
