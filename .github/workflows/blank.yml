@@ -25,12 +25,12 @@ jobs:
       - name: Install SwaggerHub CLI
         run: |
           npm install swaggerhub-cli -g
-      - name: Check for open comments
+      - name: Check the API definition exists
         run: |
-          echo comments
-      - name: Check for standardization issues
+          swaggerhub api:get nate01776/smartbear-calculator/2.0.0
+      - name: Validate definition
         run: |
-          echo standards
+          swaggerhub api:validate nate01776/smartbear-calculator/2.0.0
   Run-Regression-Tests:
     # The type of runner that the job will run on
     needs: [Validate-Design-on-Swaggerhub]
