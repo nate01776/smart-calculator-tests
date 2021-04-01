@@ -10,12 +10,16 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>inputOne</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>First input to resolve</con:description>
       </con:parameter>
       <con:parameter required="true">
         <con:name>inputTwo</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>First input to resolve</con:description>
       </con:parameter>
     </con:parameters>
@@ -39,7 +43,7 @@
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
       </con:settings>
-      <con:endpoint>https://smartbear-calculator.herokuapp.com</con:endpoint>
+      <con:endpoint>http://virtserver.swaggerhub.com</con:endpoint>
       <con:request/>
       <con:originalUri>https://smartbear-calculator.herokuapp.com/add</con:originalUri>
       <con:credentials>

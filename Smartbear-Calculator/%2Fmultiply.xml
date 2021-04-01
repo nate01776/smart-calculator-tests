@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/multiply" path="/multiply" id="8668c1c1-9508-4f03-b765-05ee3b674bc9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="8668c1c1-9508-4f03-b765-05ee3b674bc9fileName">%2Fmultiply</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="multiplyInput" id="43ac2b65-9639-4802-b4c1-5697fb0ce2a1" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>inputOne</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>inputTwo</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="ed982b40-e610-4e73-b2da-e3516045d5b5" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://virtserver.swaggerhub.com</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="ab0e82c1-468d-44de-abe4-2a92a828d6a0" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Test Case 1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="ab0e82c1-468d-44de-abe4-2a92a828d6a0fileName">Test-Case-1</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="REST Request" id="d002cbac-3eae-48e0-b218-7ba69de1326e">
+    <con:settings/>
+    <con:config service="Smartbear Calculator" resourcePath="/multiply" methodName="multiplyInput" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request" id="ed982b40-e610-4e73-b2da-e3516045d5b5" mediaType="application/json" postQueryString="false">
+        <con:settings/>
+        <con:endpoint>http://virtserver.swaggerhub.com</con:endpoint>
+        <con:request/>
+        <con:assertion type="Valid HTTP Status Codes" id="fc505e8d-d7c7-4633-bd8d-640960d040d1" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="485b0906-bc0d-4a62-b919-89a73a17b971" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="inputOne" value="15"/>
+          <con:entry key="inputTwo" value="15"/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:tagId>ef5454c1-1681-4f02-99b0-d61ca1985a13</con:tagId>
+</con:testCase>

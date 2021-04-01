@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/divide" path="/divide" id="0bb44d76-02f0-4bc6-ba16-dac48e51217a" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="0bb44d76-02f0-4bc6-ba16-dac48e51217afileName">%2Fdivide</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="divideInput" id="01ebfc49-7f97-4a04-91ac-9e8e6e3e92ca" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>inputOne</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>inputTwo</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="2599c4ce-fcba-4bd9-ad4e-1564b692bea8" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://virtserver.swaggerhub.com</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

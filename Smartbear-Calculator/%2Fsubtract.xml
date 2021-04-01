@@ -10,12 +10,16 @@
     <con:parameters>
       <con:parameter required="true">
         <con:name>inputOne</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>First input to resolve</con:description>
       </con:parameter>
       <con:parameter required="true">
         <con:name>inputTwo</con:name>
+        <con:value/>
         <con:style>QUERY</con:style>
+        <con:default/>
         <con:description>First input to resolve</con:description>
       </con:parameter>
     </con:parameters>
@@ -37,12 +41,15 @@
     </con:representation>
     <con:request id="2830eb3d-fb16-46d5-ae00-29aba802035a" mediaType="application/json" name="Request 1">
       <con:settings/>
-      <con:endpoint>https://smartbear-calculator.herokuapp.com</con:endpoint>
+      <con:endpoint>http://virtserver.swaggerhub.com</con:endpoint>
       <con:credentials>
         <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
         <con:authType>No Authorization</con:authType>
       </con:credentials>
-      <con:parameters/>
+      <con:parameters>
+        <con:entry key="inputOne" value=""/>
+        <con:entry key="inputTwo" value=""/>
+      </con:parameters>
       <con:environmentSpec>
         <con:entry environmentId="72e8ddf9-866d-40ee-ad85-d93604437d7c">
           <con:authProfile>Inherit From Parent</con:authProfile>
