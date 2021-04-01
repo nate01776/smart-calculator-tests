@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project abortOnError="false" activeEnvironment="Default environment" compositeProjectFormat="1.3" created="3.6.0" encryptionMode="Not encrypted" id="5ebba004-8c0b-41ae-b061-09329aa793e8" name="Smart Calculator API" runType="SEQUENTIAL" updated="3.6.0" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project abortOnError="false" activeEnvironment="Default environment" compositeProjectFormat="1.3" created="3.6.0" encryptionMode="Not encrypted" id="5ebba004-8c0b-41ae-b061-09329aa793e8" name="Smart Calculator API" runType="SEQUENTIAL" updated="3.7.0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="5ebba004-8c0b-41ae-b061-09329aa793e8fileName">Project-1</con:setting>
   </con:settings>
