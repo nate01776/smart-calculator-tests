@@ -84,7 +84,7 @@
   <con:testStep id="6ac0d104-3adc-4000-a958-2d46229b524f" name="Delay" type="delay">
     <con:settings/>
     <con:config>
-      <delay>850</delay>
+      <delay>1000</delay>
     </con:config>
   </con:testStep>
   <con:testStep id="fd777eee-34f9-424c-ad8f-4e2b8fa459b6" name="Data Source Loop" type="datasourceloop">
