@@ -35,8 +35,8 @@ jobs:
         
       # Runs a set of commands using the runners shell
       - name: Login to a Virtserver
-        run: java -jar ./virtserver-cli-1.0.9.jar -login -s 10.0.81.128:9090 -u John -pw pswd1
+        run: java -jar ./virtserver-cli-1.0.9.jar -login -s 18.224.146.21:9090 -u nathan -pw virtserver
 
       # Runs a set of commands using the runners shell
       - name: Run some Virtserver commands
-        run: java -jar ./virtserver-cli-1.0.9.jar -d "./" -n "Smartbear Calculator" -p 8088 -s 10.0.81.128:9090
+        run: java -jar ./virtserver-cli-1.0.9.jar -d "./" -n "Smartbear Calculator" -p 8088 -s 18.224.146.21:9090
