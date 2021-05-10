@@ -39,4 +39,4 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Get a list of virts
-        run: java -jar ./virtserver-cli-1.0.9.jar -ls
+        run: java -jar ./virtserver-cli-1.0.9.jar -ls -s 18.224.146.21:9090
